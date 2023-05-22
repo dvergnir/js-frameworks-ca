@@ -22,3 +22,12 @@ a {
   font-size: 20px;
   color: white;
 }
+
+a:hover {
+  color: rgb(114, 114, 236);
+}
+
+.logo {
+  max-width: 100px;
+  margin: auto;
+}

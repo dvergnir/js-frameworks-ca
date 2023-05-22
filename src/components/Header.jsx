@@ -2,9 +2,10 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-function Header() {
+function Header({ children }) {
   return (
     <header>
+      <div className="logo">{children}</div>
       <nav>
         <ul>
           <li>
