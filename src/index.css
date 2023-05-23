@@ -4,20 +4,21 @@ body {
 
 header {
   background-color: turquoise;
+  margin: 0;
 }
 
 ul {
   margin-top: 0px;
   list-style: none;
   display: flex;
-  justify-content: end;
+  justify-content: center;
 }
 
 li {
   padding: 10px;
 }
 
-a {
+.nav-link {
   text-decoration: none;
   font-size: 20px;
   color: white;
@@ -30,4 +31,32 @@ a:hover {
 .logo {
   max-width: 100px;
   margin: auto;
+}
+
+h2,
+.product-price {
+  text-align: center;
+  color: rgb(114, 114, 236);
+  text-decoration: none;
+  padding: 20px;
+}
+
+.product-image {
+  display: block;
+  max-width: 250px;
+  max-height: 300px;
+  margin: auto;
+}
+
+.product-price {
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.product-card:hover {
+  box-shadow: 0 0 10px rgba(64, 224, 208, 1);
+}
+
+.product-card > a {
+  text-decoration: none;
 }

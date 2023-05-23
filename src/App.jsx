@@ -1,9 +1,9 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import Products from "./components/products/Products";
+
+const url = "https://api.noroff.dev/api/v1/online-shop";
 
 function App() {
   return (
@@ -15,6 +15,9 @@ function App() {
           className="logo"
         ></img>
       </Header>
+      <main>
+        <Products />
+      </main>
     </BrowserRouter>
   );
 }
