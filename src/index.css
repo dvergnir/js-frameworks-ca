@@ -33,6 +33,7 @@ a:hover {
   margin: auto;
 }
 
+h1,
 h2,
 .product-price {
   text-align: center;
@@ -59,4 +60,31 @@ h2,
 
 .product-card > a {
   text-decoration: none;
+}
+
+#search {
+  display: block;
+  margin: auto;
+  padding: 5px;
+  border: 1px, rgb(114, 114, 236);
+}
+
+.searchbar {
+  text-align: center;
+  padding: 5px;
+  color: rgb(114, 114, 236);
+  text-transform: uppercase;
+  font-weight: 800;
+}
+
+.product-detail {
+  padding: 20px;
+}
+
+#add-to-cart {
+  color: rgb(114, 114, 236);
+  background-color: rgba(64, 224, 208);
+  border-color: rgb(114, 114, 236);
+  border-radius: 5px;
+  font-size: 20px;
 }
