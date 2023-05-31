@@ -4,7 +4,6 @@ import Home from "./components/pages/Home";
 import Product from "./components/pages/Products";
 
 function App() {
-  console.log(Home);
   return (
     <div>
       <Routes>

@@ -24,12 +24,7 @@ function Header({ children }) {
             </Link>
           </li>
         </ul>
-        <form className="searchbar">
-          <label htmlFor="search" className="search-label">
-            Search by title
-          </label>
-          <input type="search" id="search" name="search" />
-        </form>
+        <form className="searchbar"></form>
       </nav>
     </header>
   );
