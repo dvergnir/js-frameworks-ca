@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getProductById } from "../../utils/getProductById.jsx";
+import Button from "../Button.jsx";
 
 const ProductDetail = () => {
   const { id } = useParams();
@@ -29,7 +30,7 @@ const ProductDetail = () => {
       />
       <p>{product.description}</p>
       <h3>Price: ${product.price}</h3>
-      <button id="add-to-cart">Add to cart</button>
+      <Button>Add to Cart</Button>
     </div>
   );
 };

@@ -6,6 +6,12 @@ export const ProductCard = styled.div`
   margin: auto;
   margin-top: 50px;
   background-color: rgba(64, 224, 208, 0.35);
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(64, 224, 208, 1);
+  }
 
   @media (max-width: 420px) {
     width: 250px;
@@ -39,4 +45,12 @@ export const ProductDetailContainer = styled.div`
   margin-top: 50px;
   background-color: rgba(64, 224, 208, 0.35);
   color: rgb(114, 114, 236);
+`;
+
+export const ButtonContainer = styled.div`
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  padding-bottom: 20px;
 `;

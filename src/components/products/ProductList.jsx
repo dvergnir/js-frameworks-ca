@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { ProductCard, GridContainer } from "./style";
+import { ProductCard, GridContainer, ButtonContainer } from "./style";
+import Button from "../Button";
 
 export default function ProductList({ products }) {
   return (
@@ -17,6 +18,9 @@ export default function ProductList({ products }) {
               className="product-image"
               alt={product.title}
             />
+            <ButtonContainer>
+              <Button>View Product</Button>
+            </ButtonContainer>
           </Link>
         </ProductCard>
       ))}
