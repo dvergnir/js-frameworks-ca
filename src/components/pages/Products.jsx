@@ -4,9 +4,7 @@ import { ProductDetailContainer } from "../products/style";
 export default function Product() {
   return (
     <>
-      <ProductDetailContainer>
-        <ProductDetail />
-      </ProductDetailContainer>
+      <ProductDetail />
     </>
   );
 }

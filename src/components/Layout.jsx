@@ -1,5 +1,7 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import { Outlet } from "react-router-dom";
+import { MainContent } from "./products/style";
 
 export default function Layout() {
   return (
@@ -11,7 +13,10 @@ export default function Layout() {
           className="logo"
         ></img>
       </Header>
-      <Outlet />
+      <MainContent>
+        <Outlet />
+      </MainContent>
+      <Footer>Copyright: Benjamin Løndal 2023-</Footer>
     </>
   );
 }
