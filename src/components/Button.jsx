@@ -10,6 +10,7 @@ const StyledButton = styled.button`
   display: block;
   margin: 0 auto;
   cursor: pointer;
+  padding: 8px;
 
   &:hover {
     color: rgba(64, 224, 208);

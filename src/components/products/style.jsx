@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const ProductCard = styled.div`
   width: 300px;
   height: 100%;
+  max-height: 500px;
   margin: auto;
   margin-top: 50px;
   background-color: rgba(64, 224, 208, 0.35);
@@ -22,7 +23,7 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 
-  @media (max-width: 1250px) {
+  @media (max-width: 1310px) {
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -34,7 +35,7 @@ export const GridContainer = styled.div`
     grid-template-columns: 1fr;
   }
 
-  grid-gap: 10px;
+  grid-gap: 30px;
 `;
 
 export const ProductDetailContainer = styled.div`
@@ -53,4 +54,29 @@ export const ButtonContainer = styled.div`
   width: 100%;
   text-align: center;
   padding-bottom: 20px;
+`;
+
+export const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: auto;
+  margin-top: 50px;
+  background-color: rgba(64, 224, 208, 0.35);
+  color: rgb(114, 114, 236);
+  padding-top: 20px;
+  padding-bottom: 20px;
+`;
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  text-align: center;
+`;
+
+export const MainContent = styled.div`
+  flex: 1;
+  padding-bottom: 60px;
 `;

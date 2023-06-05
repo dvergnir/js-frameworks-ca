@@ -14,7 +14,7 @@ function Header({ children }) {
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="nav-link">
+            <Link to="/Contact" className="nav-link">
               Contact
             </Link>
           </li>
