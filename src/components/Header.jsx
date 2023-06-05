@@ -24,6 +24,7 @@ function Header({ children }) {
             </Link>
           </li>
         </ul>
+        <form className="searchbar"></form>
       </nav>
     </header>
   );

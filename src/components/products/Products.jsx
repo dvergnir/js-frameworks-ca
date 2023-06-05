@@ -1,42 +1,39 @@
-import { ProductItem } from "./ProductItem";
-import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { ProductCard, GridContainer } from "./style";
+import React, { useState, useEffect } from "react";
+import { fetchData } from "../../utils/api";
+import ProductList from "./ProductList";
+import SearchBar from "../SearchBar";
 
 export default function Products() {
-  try {
-    const [data, setData] = useState([]);
-    const endpoint = "https://api.noroff.dev/api/v1/online-shop";
+  const [data, setData] = useState([]);
+  const [filteredData, setFilteredData] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
 
+  useEffect(() => {
     async function getData() {
-      const response = await fetch(endpoint);
-      setData(await response.json());
+      try {
+        const fetchedData = await fetchData();
+        setData(fetchedData);
+        setFilteredData(fetchedData);
+      } catch (error) {
+        console.log(error);
+      }
     }
+    getData();
+  }, []);
 
-    useEffect(() => {
-      getData();
-    }, []);
+  const handleSearch = (searchTerm) => {
+    setSearchTerm(searchTerm);
 
-    return (
-      <GridContainer>
-        {data.map((data) => (
-          <ProductCard className="product-card" key={data.id}>
-            <Link to={`product/${data.id}`}>
-              <h2>{data.title}</h2>
-              <p className="product-price">
-                Price: {data.price.toLocaleString()} NOK
-              </p>
-              <img
-                src={data.imageUrl}
-                className="product-image"
-                alt={data.title}
-              />
-            </Link>
-          </ProductCard>
-        ))}
-      </GridContainer>
+    const filteredProducts = data.filter((product) =>
+      product.title.toLowerCase().includes(searchTerm.toLowerCase())
     );
-  } catch (error) {
-    console.log(error);
-  }
+    setFilteredData(filteredProducts);
+  };
+
+  return (
+    <div>
+      <SearchBar products={data} onSearch={handleSearch} />
+      <ProductList products={filteredData} />
+    </div>
+  );
 }
