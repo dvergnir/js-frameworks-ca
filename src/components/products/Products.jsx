@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { fetchData } from "../../utils/api";
 import ProductList from "./ProductList";
 import SearchBar from "../SearchBar";
+import LoadingIndicator from "../../utils/LoadingIndicator";
 
 export default function Products() {
   const [data, setData] = useState([]);
@@ -29,6 +30,10 @@ export default function Products() {
     );
     setFilteredData(filteredProducts);
   };
+
+  if (data.length === 0) {
+    return <LoadingIndicator>Loading...</LoadingIndicator>;
+  }
 
   return (
     <div>

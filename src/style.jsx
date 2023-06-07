@@ -76,7 +76,50 @@ export const FormGroup = styled.div`
   text-align: center;
 `;
 
-export const MainContent = styled.div`
+export const MainContent = styled.main`
   flex: 1;
-  padding-bottom: 60px;
+  padding-bottom: 100px;
+`;
+
+export const StyledFooter = styled.footer`
+  flex-shrink: 0;
+  text-align: center;
+  background-color: rgba(64, 224, 208);
+  color: rgb(114, 114, 236);
+  padding: 20px;
+`;
+
+export const StyledButton = styled.button`
+  color: rgb(114, 114, 236);
+  background-color: rgba(64, 224, 208);
+  border-color: rgb(114, 114, 236);
+  border-radius: 5px;
+  font-size: 20px;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  padding: 8px;
+
+  &:hover {
+    color: rgba(64, 224, 208);
+    background-color: rgb(114, 114, 236);
+  }
+`;
+
+export const StyledCartProduct = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+`;
+
+export const StyledQtyBtnContainer = styled.div`
+  display: flex;
+`;
+
+export const LayoutWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 `;

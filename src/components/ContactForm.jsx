@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { FormGroup, FormWrapper } from "./products/style";
-import Button from "./Button";
+import { FormGroup, FormWrapper, StyledButton } from "../style.jsx";
+import { useNavigate } from "react-router-dom";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -11,6 +11,8 @@ const ContactForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+
+  const navigate = useNavigate();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -23,7 +25,7 @@ const ContactForm = () => {
 
     if (Object.keys(validationErrors).length === 0) {
       console.log("Form submitted:", formData);
-      window.location.href = "/ContactSuccess";
+      navigate("/contactsuccess");
     } else {
       setErrors(validationErrors);
     }
@@ -98,7 +100,7 @@ const ContactForm = () => {
           {errors.body && <p>{errors.body}</p>}
         </FormGroup>
         <div>
-          <Button type="submit">Submit</Button>
+          <StyledButton type="submit">Submit</StyledButton>
         </div>
       </form>
     </FormWrapper>

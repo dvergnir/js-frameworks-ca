@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
+import { useCart } from "./CartProvider";
 
 function Header({ children }) {
+  const { cartSize } = useCart();
+
   return (
     <header>
       <div className="logo">{children}</div>
@@ -14,13 +17,14 @@ function Header({ children }) {
             </Link>
           </li>
           <li>
-            <Link to="/Contact" className="nav-link">
+            <Link to="/contact" className="nav-link">
               Contact
             </Link>
           </li>
           <li id="cart">
             <Link to="/cart" className="nav-link">
               <FontAwesomeIcon icon={faShoppingCart} />
+              {cartSize > 0 && <span className="cart-count">{cartSize}</span>}
             </Link>
           </li>
         </ul>
