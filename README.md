@@ -1,4 +1,4 @@
-![My-image](./assets/images/ecommerce_screenshot.png)
+![My-image](/readme.png)
 
 ## JS Frameworks Course Assignment
 
