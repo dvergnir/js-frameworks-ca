@@ -1,7 +1,3 @@
-# semester-project-2
-
-Noroff-FEU Semester Project year 2
-
 ![My-image](./assets/images/ecommerce_screenshot.png)
 
 ## JS Frameworks Course Assignment
