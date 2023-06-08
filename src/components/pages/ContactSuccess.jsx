@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { StyledButton } from "../../style";
 
-export default function CheckoutSuccess() {
+export default function ContactSuccess() {
   return (
     <>
-      <h1>Checkout Success!</h1>
+      <h1>Your message has been sent!</h1>
       <Link to="/">
         <StyledButton>Take me home</StyledButton>
       </Link>
