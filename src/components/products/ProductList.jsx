@@ -14,19 +14,29 @@ export default function ProductList({ products }) {
         <ProductCard className="product-card" key={product.id}>
           <Link to={`/products/${product.id}`}>
             <h2>{product.title}</h2>
-            <div>
+            <div className="cart-product-price">
               {product.discountedPrice &&
               product.discountedPrice !== product.price ? (
                 <>
-                  <b className="product-price">
+                  <b>
                     Price: <strike>${product.price}</strike>
                   </b>{" "}
                   <b className="discounted-price">${product.discountedPrice}</b>
+                  <span className="sale-percentage">
+                    {" "}
+                    {Math.round(
+                      ((product.price - product.discountedPrice) /
+                        product.price) *
+                        100
+                    )}
+                    %
+                  </span>
                 </>
               ) : (
-                <b className="product-price">Price: ${product.price}</b>
+                <b>Price: ${product.price}</b>
               )}
             </div>
+
             <img
               src={product.imageUrl}
               className="product-image"

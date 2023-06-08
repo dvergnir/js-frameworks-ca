@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import { useCart } from "../CartProvider";
+import { useCart } from "./CartProvider";
 import { StyledButton } from "../../style";
-import CartItemsList from "../CartItemsList";
+import CartItemsList from "./CartItemsList";
 import { Link } from "react-router-dom";
 
 const CartPage = () => {

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { getProductById } from "../../utils/getProductById";
 import { StyledButton } from "../../style";
 import { ProductDetailContainer } from "../../style";
-import { useCart } from "../CartProvider";
+import { useCart } from "../cart/CartProvider";
 import LoadingIndicator from "../../utils/LoadingIndicator";
 
 const ProductDetail = () => {

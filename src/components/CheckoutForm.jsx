@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FormGroup, FormWrapper, StyledButton } from "../style";
 import { useNavigate } from "react-router-dom";
-import { useCart } from "./CartProvider";
+import { useCart } from "./cart/CartProvider";
 
 const CheckoutForm = () => {
   const [name, setName] = useState("");

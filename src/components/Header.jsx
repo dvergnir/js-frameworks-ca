@@ -1,7 +1,7 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
-import { useCart } from "./CartProvider";
+import { useCart } from "./cart/CartProvider";
 
 function Header({ children }) {
   const { cartSize } = useCart();
@@ -12,20 +12,20 @@ function Header({ children }) {
       <nav>
         <ul>
           <li>
-            <Link to="/" className="nav-link">
+            <NavLink to="/" className="nav-link">
               Home
-            </Link>
+            </NavLink>
           </li>
           <li>
-            <Link to="/contact" className="nav-link">
+            <NavLink to="/contact" className="nav-link">
               Contact
-            </Link>
+            </NavLink>
           </li>
           <li id="cart">
-            <Link to="/cart" className="nav-link">
+            <NavLink to="/cart" className="nav-link">
               <FontAwesomeIcon icon={faShoppingCart} />
               {cartSize > 0 && <span className="cart-count">{cartSize}</span>}
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <form className="searchbar"></form>

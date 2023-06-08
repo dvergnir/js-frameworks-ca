@@ -28,6 +28,10 @@ li {
   color: white;
 }
 
+.isActive {
+  color: rgb(114, 114, 236);
+}
+
 a {
   text-decoration: none;
 }
@@ -217,4 +221,10 @@ h2,
   text-align: center;
   color: rgb(114, 114, 236);
   text-decoration: underline;
+}
+
+.sale-percentage {
+  background-color: green;
+  color: white;
+  padding: 2px;
 }
