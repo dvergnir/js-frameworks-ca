@@ -7,6 +7,7 @@ The brief was to display that I am able to build an online ecommerce app using R
 ## Built with
 
 - React
+- Styled Components
 
 ## Getting Started
 
